@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Academy - Khóa học & Kho Prompt AI</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo" id="site-logo">🚀 AI Academy</a>
+      <ul class="nav-links">
+        <li><a href="#courses">Khóa học</a></li>
+        <li><a href="#prompts">Kho Prompt</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+        <li><a href="#" id="github-link" target="_blank" class="btn-github">⭐ GitHub</a></li>
+      </ul>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <span class="badge" id="hero-badge"></span>
+      <h1 class="hero-title" id="hero-title"></h1>
+      <p class="hero-subtitle" id="hero-subtitle"></p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn btn-primary">Xem khóa học</a>
+        <a href="#prompts" class="btn btn-outline">Kho Prompt miễn phí</a>
+      </div>
+      <div class="hero-stats" id="hero-stats"></div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES ===== -->
+  <section id="courses" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>🎓 Khóa học nổi bật</h2>
+        <p>Học thực chiến, áp dụng ngay vào công việc</p>
+      </div>
+      <div class="grid" id="courses-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROMPTS ===== -->
+  <section id="prompts" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>🧠 Kho Prompt AI</h2>
+        <p>Prompt chất lượng cho ChatGPT, Claude, Midjourney...</p>
+      </div>
+
+      <div class="filter-bar">
+        <input type="text" id="prompt-search" placeholder="🔍 Tìm prompt...">
+        <div class="filter-tabs" id="prompt-filters">
+          <button class="active" data-filter="all">Tất cả</button>
+          <button data-filter="free">Miễn phí</button>
+          <button data-filter="paid">Có phí</button>
+        </div>
+      </div>
+
+      <div class="grid" id="prompts-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container contact-box">
+      <h2>💬 Liên hệ mua khóa học / prompt</h2>
+      <p>Nhắn tin trực tiếp để được tư vấn và nhận ưu đãi</p>
+      <div class="contact-links" id="contact-links"></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p id="footer-text"></p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL xem Prompt ===== -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <h3 id="modal-title"></h3>
+      <pre id="modal-body"></pre>
+      <button class="btn btn-primary" id="copy-btn">📋 Copy Prompt</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
