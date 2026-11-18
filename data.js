@@ -4,7 +4,7 @@
 
 const SITE = {
   name: "🚀 AI Academy",
-  github: "https://github.com/your-username/your-repo",   // 👉 Link GitHub của bạn
+  github: "https://promptviet.github.io/PromptViet/",   // 👉 Link GitHub của bạn
   hero: {
     badge: "🔥 Mới: Khóa học Prompt Engineering 2026",
     title: "Làm chủ AI – Tăng tốc sự nghiệp của bạn",
