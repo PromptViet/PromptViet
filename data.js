@@ -3,12 +3,12 @@
 // ============================================================
 
 const SITE = {
-  name: "🚀 AI Academy",
+  name: "🚀 PromptViet",
   github: "https://promptviet.github.io/PromptViet/",   // 👉 Link GitHub của bạn
   hero: {
-    badge: "🔥 Mới: Khóa học Prompt Engineering 2026",
+    badge: "🔥 Mới: Khóa học Prompt thực chiến 2027",
     title: "Làm chủ AI – Tăng tốc sự nghiệp của bạn",
-    subtitle: "Khóa học thực chiến & kho prompt AI chất lượng cao, giúp bạn làm việc nhanh hơn 10 lần.",
+    subtitle: "Khóa học thực chiến & kho prompt AI chất lượng cao, giúp bạn làm việc nhanh hơn gấp 10 lần.",
     stats: [
       { number: "2,500+", label: "Học viên" },
       { number: "150+", label: "Prompt AI" },
@@ -16,12 +16,11 @@ const SITE = {
     ]
   },
   contact: [
-    { label: "📘 Facebook", url: "https://facebook.com/yourpage" },
-    { label: "💬 Zalo", url: "https://zalo.me/0123456789" },
-    { label: "✈️ Telegram", url: "https://t.me/yourusername" },
-    { label: "📧 Email", url: "mailto:you@email.com" }
+    { label: "📘 Facebook", url: "https://www.facebook.com/share/1BngJXXhXH/?mibextid=wwXIfr" },
+    { label: "💬 Zalo", url: "https://zalo.me/0933702465" },
+    { label: "📧 Email", url: "mailto:lenguyennhatbinh27@gmail.com" }
   ],
-  footer: "© 2026 AI Academy. Made with ❤️ by NhatBinh"
+  footer: "© 2026 PromptViet AI Made by NhatBinh"
 };
 
 // ------------------------------------------------------------
