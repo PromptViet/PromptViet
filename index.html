@@ -3,100 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> PromptViet - Khóa học & Kho Prompt AI thực chiến </title>
-  <link rel="stylesheet" href="style.css">
+  <title>PromptViet – Khóa học & Kho Prompt AI thực chiến</title>
+
+  <!-- SEO -->
+  <meta name="description" content="PromptViet: khóa học Prompt Engineering thực chiến và kho prompt AI tiếng Việt cho ChatGPT, Claude, Midjourney. Học nhanh, áp dụng ngay vào công việc.">
+  <meta name="keywords" content="prompt AI, prompt tiếng Việt, khóa học ChatGPT, prompt engineering, PromptViet">
+  <meta name="author" content="PromptViet">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://promptviet.github.io/PromptViet/">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Facebook / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://promptviet.github.io/PromptViet/">
+  <meta property="og:title" content="PromptViet – Khóa học & Kho Prompt AI thực chiến">
+  <meta property="og:description" content="Khóa học Prompt Engineering và kho prompt AI tiếng Việt cho ChatGPT, Claude, Midjourney.">
+  <meta property="og:image" content="https://promptviet.github.io/PromptViet/assets/og-image.png">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PromptViet – Khóa học & Kho Prompt AI thực chiến">
+  <meta name="twitter:description" content="Khóa học Prompt Engineering và kho prompt AI tiếng Việt.">
+  <meta name="twitter:image" content="https://promptviet.github.io/PromptViet/assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts (preconnect để tải nhanh hơn) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data (Google hiểu đây là website/tổ chức) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PromptViet",
+    "url": "https://promptviet.github.io/PromptViet/",
+    "description": "Khóa học và kho prompt AI tiếng Việt thực chiến",
+    "inLanguage": "vi"
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+
+  <!-- Link bỏ qua điều hướng (dành cho người dùng bàn phím) -->
+  <a href="#main" class="skip-link">Bỏ qua điều hướng</a>
 
   <!-- ===== HEADER ===== -->
   <header class="header">
-    <nav class="nav container">
-      <a href="#" class="logo" id="site-logo">PROMPT VIET</a>
-      <ul class="nav-links">
-        <li><a href="#" id="github-link" target="_blank" class="btn-github">Trang Chủ</a></li>
+    <nav class="nav container" aria-label="Điều hướng chính">
+      <a href="#top" class="logo" id="site-logo">PROMPT VIET</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#top">Trang chủ</a></li>
         <li><a href="#courses">Khóa học</a></li>
         <li><a href="#prompts">Kho Prompt</a></li>
         <li><a href="#contact">Liên hệ</a></li>
+        <li>
+          <a href="https://github.com/PromptViet/PromptViet"
+             id="github-link" class="btn-github"
+             target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
       </ul>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <button class="menu-toggle" id="menu-toggle"
+              aria-label="Mở menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Chuyển chế độ sáng/tối">🌙</button>
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <span class="badge" id="hero-badge"></span>
-      <h1 class="hero-title" id="hero-title"></h1>
-      <p class="hero-subtitle" id="hero-subtitle"></p>
-      <div class="hero-actions">
-        <a href="#courses" class="btn btn-primary">Xem khóa học</a>
-        <a href="#prompts" class="btn btn-outline">Kho Prompt miễn phí</a>
-      </div>
-      <div class="hero-stats" id="hero-stats"></div>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- ===== COURSES ===== -->
-  <section id="courses" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>🎓 Khóa học nổi bật</h2>
-        <p>Học thực chiến, áp dụng ngay vào công việc</p>
-      </div>
-      <div class="grid" id="courses-grid"></div>
-    </div>
-  </section>
-
-  <!-- ===== PROMPTS ===== -->
-  <section id="prompts" class="section section-alt">
-    <div class="container">
-      <div class="section-head">
-        <h2>Kho Prompt AI</h2>
-        <p>Prompt chất lượng cho ChatGPT, Claude, Midjourney...</p>
-      </div>
-
-      <div class="filter-bar">
-        <input type="text" id="prompt-search" placeholder="🔍 Tìm prompt...">
-        <div class="filter-tabs" id="prompt-filters">
-          <button class="active" data-filter="all">Tất cả</button>
-          <button data-filter="free">Miễn phí</button>
-          <button data-filter="paid">Có phí</button>
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <span class="badge" id="hero-badge">🚀 Cập nhật 2026</span>
+        <h1 class="hero-title" id="hero-title">Làm chủ AI với Prompt tiếng Việt thực chiến</h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Khóa học Prompt Engineering + kho prompt chất lượng cho ChatGPT, Claude, Midjourney.
+          Học xong áp dụng ngay vào công việc.
+        </p>
+        <div class="hero-actions">
+          <a href="#courses" class="btn btn-primary">Xem khóa học</a>
+          <a href="#prompts" class="btn btn-outline">Kho Prompt miễn phí</a>
+        </div>
+        <div class="hero-stats" id="hero-stats">
+          <div><strong>100+</strong><span>Prompt</span></div>
+          <div><strong>5+</strong><span>Khóa học</span></div>
+          <div><strong>1.000+</strong><span>Học viên</span></div>
         </div>
       </div>
+    </section>
 
-      <div class="grid" id="prompts-grid"></div>
-    </div>
-  </section>
+    <!-- ===== COURSES ===== -->
+    <section id="courses" class="section" aria-labelledby="courses-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="courses-heading">🎓 Khóa học nổi bật</h2>
+          <p>Học thực chiến, áp dụng ngay vào công việc</p>
+        </div>
+        <div class="grid" id="courses-grid" aria-live="polite">
+          <p class="loading">Đang tải khóa học…</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section">
-    <div class="container contact-box">
-      <h2>💬 Liên hệ mua khóa học / prompt</h2>
-      <p>Nhắn tin trực tiếp để được tư vấn và nhận ưu đãi</p>
-      <div class="contact-links" id="contact-links"></div>
-    </div>
-  </section>
+    <!-- ===== PROMPTS ===== -->
+    <section id="prompts" class="section section-alt" aria-labelledby="prompts-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="prompts-heading">🧠 Kho Prompt AI</h2>
+          <p>Prompt chất lượng cho ChatGPT, Claude, Midjourney…</p>
+        </div>
+
+        <div class="filter-bar">
+          <label for="prompt-search" class="sr-only">Tìm kiếm prompt</label>
+          <input type="search" id="prompt-search" placeholder="Tìm prompt theo tên, từ khóa…" autocomplete="off">
+
+          <div class="filter-tabs" id="prompt-filters" role="group" aria-label="Lọc prompt">
+            <button type="button" class="active" data-filter="all" aria-pressed="true">Tất cả</button>
+            <button type="button" data-filter="free" aria-pressed="false">Miễn phí</button>
+            <button type="button" data-filter="paid" aria-pressed="false">Có phí</button>
+          </div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+
+        <div class="grid" id="prompts-grid" aria-live="polite">
+          <p class="loading">Đang tải prompt…</p>
+        </div>
+
+        <p class="empty-state" id="prompts-empty" hidden>😕 Không tìm thấy prompt phù hợp.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container contact-box">
+        <h2 id="contact-heading">💬 Liên hệ mua khóa học / prompt</h2>
+        <p>Nhắn tin trực tiếp để được tư vấn và nhận ưu đãi</p>
+        <div class="contact-links" id="contact-links">
+          <a href="https://zalo.me/0XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Zalo</a>
+          <a href="https://m.me/promptviet" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Messenger</a>
+          <a href="mailto:contact@promptviet.com" class="btn btn-outline">Email</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <p id="footer-text"></p>
+      <p id="footer-text">© 2026 PromptViet. Mọi quyền được bảo lưu.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/PromptViet/PromptViet" target="_blank" rel="noopener noreferrer">Mã nguồn</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+        <li><a href="#top">Lên đầu trang ↑</a></li>
+      </ul>
     </div>
   </footer>
 
   <!-- ===== MODAL xem Prompt ===== -->
-  <div class="modal" id="modal">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal-content">
-      <button class="modal-close" id="modal-close">✕</button>
+      <button type="button" class="modal-close" id="modal-close" aria-label="Đóng">✕</button>
       <h3 id="modal-title"></h3>
-      <pre id="modal-body"></pre>
-      <button class="btn btn-primary" id="copy-btn">📋 Copy Prompt</button>
+      <pre id="modal-body" tabindex="0"></pre>
+      <button type="button" class="btn btn-primary" id="copy-btn">📋 Copy Prompt</button>
+      <span class="copy-status" id="copy-status" aria-live="polite"></span>
     </div>
   </div>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <noscript>
+    <p class="noscript-warning">Vui lòng bật JavaScript để xem đầy đủ khóa học và prompt.</p>
+  </noscript>
+
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
